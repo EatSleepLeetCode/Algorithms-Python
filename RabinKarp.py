@@ -1,3 +1,5 @@
+# Rabin Karp implementation
+
 seed = 3
 
 
