@@ -1,6 +1,6 @@
 # Rabin Karp implementation
 
-seed = 3
+seed = 101
 
 
 def pattern_found(input_str, pattern):
