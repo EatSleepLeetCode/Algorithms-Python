@@ -33,14 +33,14 @@ def is_match(input_str, pattern, offset, str_len):
 def compute_hash(str_param, str_len):
     hash_value = 0
     for i in range(str_len):
-        hash_value += (ord(str_param[i]) - ord('a')) * seed ** i
+        hash_value += (ord(str_param[i])) * seed ** i
     return hash_value
 
 
 def compute_rolling_hash(str, offset, str_len, prev_hash):
-    prev_hash -= ord(str[offset - 1]) - ord('a')
+    prev_hash -= ord(str[offset - 1])
     prev_hash /= seed
-    prev_hash += (ord(str[offset + str_len - 1]) - ord('a')) * seed ** (str_len - 1)
+    prev_hash += (ord(str[offset + str_len - 1])) * seed ** (str_len - 1)
     return prev_hash
 
 
