@@ -49,8 +49,8 @@ class DisjointSet:
         node1 = self.nodeMap[str1]
         node2 = self.nodeMap[str2]
 
-        parent1 = self.findSet(node1)
-        parent2 = self.findSet(node2)
+        parent1 = self.findSetNode(node1)
+        parent2 = self.findSetNode(node2)
 
         if parent1 == parent2:
             return
@@ -67,9 +67,9 @@ class DisjointSet:
 
     def findSet(self, strVal):
         node = self.nodeMap[strVal]
-        return self.findSet(node).val
+        return self.findSetNode(node).val
 
-    def findSet(self, node):
+    def findSetNode(self, node):
         while node != node.parent:
             node.parent = node.parent.parent
             node = node.parent
