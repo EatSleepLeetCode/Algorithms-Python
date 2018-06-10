@@ -1,3 +1,5 @@
+import collections
+
 class Solution(object):
     def mostCommonWord(self, paragraph, banned):
         bannedSet = set(banned)
@@ -10,4 +12,3 @@ class Solution(object):
                 maxFreq, result = freqMap[word], word
 
         return result
-    
